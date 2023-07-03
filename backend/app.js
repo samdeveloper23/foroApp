@@ -8,7 +8,9 @@ const app = express();
 const apiRoutes = require('./routes/api');
 const cors = require('cors');
 
-
+app.get('/', (res, req) => {
+    res.setEncoding('Bienvenido a GiliForo');
+})
 app.use(cors());
 // Middleware para analizar el cuerpo de las solicitudes
 app.use(express.json());
@@ -23,8 +25,7 @@ app.use((err, req, res, next) => {
 });
 
 // Puerto de escucha
-const IP = '192.168.1.35'
+
 const port = process.env.PORT || 3000;
-app.listen(port, IP, () => {
-    console.log(`Servidor escuchando en el puerto ${port}`);
-});
+app.listen(port);
+console.log('server on port:', port);

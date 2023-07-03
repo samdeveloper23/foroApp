@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
     "host": "--host",
     "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,6 +27,7 @@
     "sequelize": "^6.32.1"
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.2.16",
     "nodemon": "^1.14.9"
   }
 }

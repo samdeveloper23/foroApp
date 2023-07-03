@@ -3,10 +3,13 @@ const mysql = require('mysql2/promise');
 
 const createTables = async () => {
   const dbConfig = {
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
+    host: "aws.connect.psdb.cloud",
+    user: "orj0wm5sgb2jbcr49qm9",
+    password: "pscale_pw_qz3852S93fQoPTEZYO1ubKG612c5jJFjF7WNVp0Uzy0",
+    database: "developersam23",
+    ssl: {
+      rejectUnauthorized: false
+    }
   };
 
   let connection;
@@ -41,8 +44,7 @@ const createTables = async () => {
       content TEXT,
       userId INT UNSIGNED NOT NULL,
       createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-      updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-      FOREIGN KEY (userId) REFERENCES users(id)
+      updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     )
   `);
 
@@ -53,9 +55,7 @@ const createTables = async () => {
       postId INT UNSIGNED NOT NULL,
       userId INT UNSIGNED NOT NULL,
       createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-      updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-      FOREIGN KEY (postId) REFERENCES publications(id),
-      FOREIGN KEY (userId) REFERENCES users(id)
+      updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     )
   `);
 

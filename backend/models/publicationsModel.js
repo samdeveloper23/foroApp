@@ -1,7 +1,6 @@
+// publicationModel.js
 const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = require('../utils/database');
-
-const UserModel = require('./userModel');
 
 const PublicationModel = sequelize.define('Publication', {
     id: {
@@ -15,8 +14,5 @@ const PublicationModel = sequelize.define('Publication', {
         allowNull: false,
     },
 });
-
-// Definir la relación entre Publication y User
-PublicationModel.belongsTo(UserModel, { foreignKey: 'userId' });
 
 module.exports = PublicationModel;

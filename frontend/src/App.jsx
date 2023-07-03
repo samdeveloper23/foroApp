@@ -28,7 +28,7 @@ const App = () => {
         <Route exact path="/login" element={<Login />} />
         {isAuthenticated ? (
           <Route exact path="/home" element={<Home />} />
-          //desde aqui montamos las zonas protegidas
+          
         ) : (
           <Route path="*" element={<Login />} />
         )}

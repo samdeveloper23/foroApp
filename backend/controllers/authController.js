@@ -4,6 +4,9 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const UserModel = require('../models/userModel');
 
+
+
+
 const register = async (req, res, next) => {
   try {
     const { username, email, password } = req.body;
@@ -59,8 +62,14 @@ const protectedRoute = (req, res) => {
   res.json({ message: 'Ruta protegida' });
 };
 
+//------------------------------
+
+
+
+
 module.exports = {
   register,
   login,
   protectedRoute,
+
 };

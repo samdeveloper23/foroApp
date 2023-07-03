@@ -3,6 +3,8 @@ const router = express.Router();
 const authController = require('../controllers/authController');
 const authMiddleware = require('../middlewares/authMiddleware');
 const app = require('../app');
+const { getPublications } = require('../controllers/getTherads');
+const { createPublication } = require('../controllers/createPublication');
 
 
 // Ruta de registro de usuario
@@ -14,7 +16,9 @@ router.post('/login', authController.login);
 // Ruta protegida (ejemplo)
 router.get('/home', authMiddleware, authController.protectedRoute);
 
-// Ruta para obtener los hilos
+router.get('/home/threads', authMiddleware, getPublications);
+
+router.post('/home/threads', authMiddleware, createPublication);
 
 module.exports = router;
 

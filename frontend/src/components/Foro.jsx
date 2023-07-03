@@ -1,26 +1,39 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import ForoInput from './ForoInput';
+import ForoList from './ForoList';
+import './Foro.css';
 
 function Foro() {
   const [threads, setThreads] = useState([]);
 
   useEffect(() => {
-    // Lógica para obtener los hilos de conversación desde la API utilizando Axios
+    const token = localStorage.getItem('token');
+    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
-    axios.get('/api/threads')
+    axios.get('http://192.168.1.35:4000/api/home/threads')
       .then(response => setThreads(response.data))
       .catch(error => console.error(error));
   }, []);
 
+  const getThreads = () => {
+    const token = localStorage.getItem('token');
+    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+
+    axios.get('http://192.168.1.35:4000/api/home/threads')
+      .then(response => setThreads(response.data))
+      .catch(error => console.error(error));
+  };
+
+  const handleThreadAdded = (newThread) => {
+    setThreads([...threads, newThread]);
+    getThreads();
+  };
+
   return (
-    <div>
-      <h1>Hilos de conversación</h1>
-      {threads.map(thread => (
-        <div key={thread.id}>
-          <h2>{thread.title}</h2>
-          <p>{thread.content}</p>
-        </div>
-      ))}
+    <div className='foro'>
+      <ForoInput onThreadAdded={handleThreadAdded} />
+      <ForoList threads={threads} />
     </div>
   );
 }

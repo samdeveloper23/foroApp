@@ -1,0 +1,47 @@
+.foro {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: #6666667e;
+  max-width: 400vw;
+  margin: 0 auto 10opx;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 30px;
+}
+
+.label {
+  font-size: 20px;
+  display: flex;
+  font-weight: bold;
+}
+
+.textarea {
+  background-color: rgba(0, 255, 255, 0.253);
+}
+
+.posts {
+  border-radius: 13px;
+  background: #6666667e;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.content {
+    width: 60vw;
+        
+        word-wrap: break-word;
+  box-sizing:content-box;
+}
+
+.contenido {
+    box-sizing:content-box;
+}

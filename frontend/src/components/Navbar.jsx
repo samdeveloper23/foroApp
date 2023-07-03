@@ -6,7 +6,7 @@ function Navbar() {
       <div className="logo">GiliForo</div>
       <ul className="nav-links">
         <li>
-          <a href="/">Inicio</a>
+          <a href="/home">Inicio</a>
         </li>
         <li>
           <a href="/perfil">Perfil</a>

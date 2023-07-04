@@ -23,7 +23,7 @@ const Register = () => {
   
       try {
         // Realizar una solicitud POST al backend para registrar el usuario
-        const response = await axios.post('http://192.168.1.35:4000/api/register', userData);
+        const response = await axios.post('https://giliforo.fly.dev/api/register', userData);
         console.log('Usuario registrado:', response.data);
         setUserOn(true);
         

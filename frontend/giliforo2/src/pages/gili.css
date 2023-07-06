@@ -1,0 +1,115 @@
+.border-gili {
+    color: aliceblue;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 60vh;
+    width: 30vw;
+    border-radius: 40px;
+    background-color:  rgba(66, 183, 238, 0.425);
+}
+
+.border-gilipolleces {
+    padding-right: 2rem;
+    text-decoration: none;
+    color: aliceblue;
+    display: flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    gap: 2rem;
+    height: 90vh;
+    width: 60vw;
+    border-radius: 40px;
+    background-color:  rgba(66, 183, 238, 0.425);
+    max-width: 60%;
+}
+
+.container-gili {
+    margin: 0 20vw;
+    gap: 1rem;
+    width: 60vw;
+    display: flex;
+    max-width: 60vw;
+}
+
+.input-gili {
+    background-color: rgba(66, 183, 238, 0.425);
+    border-radius: 10px;
+    height: 5rem;    
+}
+
+.button {
+    word-break: break-all;
+    overflow:hidden;
+    border-radius: 10px;
+    display: inline-block;
+    outline: 0;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    padding: 9px 22px;
+    font-size: 22px;
+    height: 50px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    line-height: normal;
+    background: linear-gradient(90deg,#5522fa 0,#0074e4 100%);
+    border-radius: 50px;
+    transition: color .2s ease,background-color .2s ease,box-shadow .2s ease;
+    :hover{
+        box-shadow: 0 0 0 0.15rem #5ceace;
+    }
+    
+}
+
+.none {
+    color: aliceblue;
+    word-break: break-all;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: auto;
+    background-color:  rgba(66, 183, 238, 0.425);
+    border-radius: 30px;
+    width: 40vw;
+    padding-right: 40px;
+}
+
+@media (max-width: 768px) {
+    .border-gili {
+      width: 80vw;
+    }
+  
+    .border-gilipolleces {
+      width: 90vw;
+    }
+  
+    .container-gili {
+      flex-direction:column;
+      align-items: center;
+      flex-wrap: wrap;
+      align-content: space-between;
+      margin: 0;
+      width: 100vw;
+    }
+  
+    .button {
+      font-size: 18px;
+      height: 40px;
+    }
+  
+    .none-back {
+      word-break: break-all;
+      overflow: hidden;
+      border-radius: 10px;
+      width: 100%;
+    }
+  }
+  
+

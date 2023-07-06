@@ -1,0 +1,80 @@
+.navbar {
+  box-sizing: border-box;
+  border: 1px gray solid;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgba(66, 183, 238, 0.425);
+  border-radius: 40px;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  border: none;
+
+  color: rgba(255, 255, 255, 1);
+  text-decoration: normal;
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  white-space: pre;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1),
+    0 0 30px rgba(255, 255, 255, 1), 0 0 40px #ff00de, 0 0 70px #ff00de,
+    0 0 80px #ff00de, 0 0 100px #ff00de;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.title:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1),
+    0 0 30px rgba(255, 255, 255, 1), 0 0 40px #00ffff, 0 0 70px #00ffff,
+    0 0 80px #00ffff, 0 0 100px #00ffff;
+}
+
+.navigater {
+  margin: 0 3rem;
+  border: 1px gray solid;
+  background-color: rgba(128, 128, 128, 0.459);
+  border-radius: 40px;
+}
+
+.link {
+  margin: 0 3rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.link:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1),
+    0 0 30px rgba(255, 255, 255, 1), 0 0 40px #00ffff, 0 0 70px #00ffff,
+    0 0 80px #00ffff, 0 0 100px #00ffff;
+}
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column; /* Cambia la dirección del flexbox a horizontal */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 1rem; /* Añade un poco de espacio interno */
+    border-radius: 0; /* Quita el borde redondeado */
+  }
+
+  .title {
+    font-size: 1.2rem; /* Reduce el tamaño del título */
+  }
+
+  .navigater,
+  .link {
+    margin: .5rem; /* Quita el margen horizontal */
+    border: none; /* Quita el borde */
+    background-color: transparent; /* Quita el fondo */
+  }
+}

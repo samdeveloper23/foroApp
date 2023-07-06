@@ -1,0 +1,12 @@
+.container {
+    
+    width: 60vw;
+    margin: 0 20vw;
+}
+
+.border {
+    font-size: 2rem;
+    color: aliceblue;
+    border-radius: 40px;
+    background-color:  rgba(66, 183, 238, 0.425);;
+}
